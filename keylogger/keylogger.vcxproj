@@ -72,7 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <AllProjectIncludesArePublic>true</AllProjectIncludesArePublic>
-    <PublicIncludeDirectories>header\</PublicIncludeDirectories>
+    <PublicIncludeDirectories>C:\Users\skill\source\repos\keylogger\keylogger\headers;C:\Users\skill\source\repos\keylogger\keylogger\src</PublicIncludeDirectories>
+    <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -110,6 +111,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\skill\source\repos\keylogger\keylogger\headers</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,13 +136,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="email.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClInclude Include="headers\email.h" />
+    <ClInclude Include="headers\main.h">
+      <FileType>CppHeader</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="email.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="resource.h" />
+    <ClCompile Include="src\email.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
