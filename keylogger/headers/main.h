@@ -1,5 +1,10 @@
 #pragma once
 
-#include <stdio.h>
+
+
+
+
+void logfile(int key);
+void hideconsole();
 
 int main();
