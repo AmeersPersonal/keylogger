@@ -137,14 +137,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="headers\email.h" />
-    <ClInclude Include="headers\main.h">
-      <FileType>CppHeader</FileType>
-      <DeploymentContent>true</DeploymentContent>
-    </ClInclude>
+    <ClInclude Include="headers\one_time_creation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\email.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\one_time_creation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

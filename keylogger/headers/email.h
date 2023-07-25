@@ -2,7 +2,7 @@
 #include <string>
 #include<windows.applicationmodel.email.h>
 #include <asyncinfo.h>
-class email
+class Email
 {
 
     private:
@@ -14,6 +14,7 @@ class email
         void Compose_email();
         double last_sent_log();
 
- 
+
+
 };
 

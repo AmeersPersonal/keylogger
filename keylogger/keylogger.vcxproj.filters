@@ -2,10 +2,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="headers\email.h" />
-    <ClInclude Include="headers\main.h" />
+    <ClInclude Include="headers\one_time_creation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\email.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\one_time_creation.cpp" />
   </ItemGroup>
 </Project>

