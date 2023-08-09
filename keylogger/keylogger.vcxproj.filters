@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="headers\email.h" />
     <ClInclude Include="headers\one_time_creation.h" />
+    <ClInclude Include="headers\email.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\email.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\one_time_creation.cpp" />
+    <ClCompile Include="src\email.cpp" />
+    <ClCompile Include="src\current_window.cpp" />
   </ItemGroup>
 </Project>

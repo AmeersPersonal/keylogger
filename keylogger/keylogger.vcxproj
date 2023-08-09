@@ -140,6 +140,7 @@
     <ClInclude Include="headers\one_time_creation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\current_window.cpp" />
     <ClCompile Include="src\email.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\one_time_creation.cpp" />
