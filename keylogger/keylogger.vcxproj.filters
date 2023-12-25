@@ -3,11 +3,32 @@
   <ItemGroup>
     <ClInclude Include="headers\one_time_creation.h" />
     <ClInclude Include="headers\email.h" />
+    <ClInclude Include="headers\current_window.h" />
+    <ClInclude Include="includes\curl\include\curl\curl.h" />
+    <ClInclude Include="includes\curl\include\curl\curlver.h" />
+    <ClInclude Include="includes\curl\include\curl\easy.h" />
+    <ClInclude Include="includes\curl\include\curl\header.h" />
+    <ClInclude Include="includes\curl\include\curl\mprintf.h" />
+    <ClInclude Include="includes\curl\include\curl\multi.h" />
+    <ClInclude Include="includes\curl\include\curl\options.h" />
+    <ClInclude Include="includes\curl\include\curl\stdcheaders.h" />
+    <ClInclude Include="includes\curl\include\curl\system.h" />
+    <ClInclude Include="includes\curl\include\curl\typecheck-gcc.h" />
+    <ClInclude Include="includes\curl\include\curl\urlapi.h" />
+    <ClInclude Include="includes\curl\include\curl\websockets.h" />
+    <ClInclude Include="headers\main.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\one_time_creation.cpp" />
     <ClCompile Include="src\email.cpp" />
     <ClCompile Include="src\current_window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="includes\curl\lib\libcurl_a_debug.lib" />
+    <Library Include="includes\curl\lib\libcurl.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="includes\curl\lib\libcurl.dll" />
   </ItemGroup>
 </Project>

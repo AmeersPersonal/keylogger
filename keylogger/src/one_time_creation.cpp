@@ -6,9 +6,10 @@
 
 #pragma warning(disable : 4996)
 /*
-All the things that will need to be only exucted once will be in here
-ex: log files
+code that only needs to be runned once
+1. log files
 
+FUTURE STUFF::
 
 
 */
