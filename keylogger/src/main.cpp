@@ -135,7 +135,6 @@ int main()
 				if (GetAsyncKeyState(i) & 0x8001)
 				{
 					special_keys_translte(i);
-					std::cout << "w"<< std::endl;
 				}
 
 			}
